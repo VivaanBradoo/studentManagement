@@ -34,7 +34,7 @@ int main() {
         printf("6. Exit\n");
         printf("Enter your choice: ");
         scanf("%d", &choice);
-        getchar(); // flush newline
+        getchar(); 
 
         switch (choice) {
             case 1: addStudent(); break;
@@ -184,7 +184,7 @@ void modifyStudent() {
     int roll, found = 0;
     struct Student s;
 
-    printf("Enter Roll No to modify: ");
+    printf("Enter PRN No to modify: ");
     scanf("%d", &roll);
     getchar();
 
