@@ -277,17 +277,17 @@ void modifyStudent() {
         return;
     }
 
-    int roll, found = 0;
+    int prn, found = 0;
     struct Student s;
 
     printf("Enter PRN No to modify: ");
-    scanf("%d", &roll);
+    scanf("%d", &prn);
     getchar();
 
     while (fscanf(fp, "%d,%d,%49[^,],%29[^,],%1[^,],%49[^,],%19[^,],%f\n",
                   &s.rollNo, &s.prnNo, s.name, s.department,
                   s.section, s.email, s.mobile, &s.gpa) == 8) {
-        if (s.rollNo == roll) {
+        if (s.prnNo == prn) {
             printf("Enter New Name: ");
             fgets(s.name, sizeof(s.name), stdin);
             s.name[strcspn(s.name, "\n")] = 0;
